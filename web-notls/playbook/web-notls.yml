@@ -10,7 +10,7 @@
 
     - name: enable configuration
       file: >
-        dest=/etc/nginx/sites-available/default
+        dest=/etc/nginx/sites-enabled/default
         src=/etc/nginx/sites-available/default
         state=link
 
