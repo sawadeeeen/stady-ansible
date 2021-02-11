@@ -1,10 +1,9 @@
 - name: Configure 
   hosts: webservers
   become: True
+  vars_files:
+    - vars_files/secure.yml
   vars: 
-    key_file: /etc/nginx/ssl/nginx/key
-    cert_file: /etc/nginx/ssl/nginx.crt
-    conf_file: /etc/nginx/sites-available/default
     server_name: localhost
   tasks:
     - name: Install nginx
