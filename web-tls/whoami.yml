@@ -5,5 +5,7 @@
       command: id -un
       register: login
     - debug: var=login
+    - name: check local fact
+      debug: var=ansible_local
     - name: print boot title
       debug: msg="the title of the book is {{ansible_local.example.book.title}}"
